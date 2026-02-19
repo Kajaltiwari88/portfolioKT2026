@@ -28,7 +28,16 @@ export default function Scene() {
     <Canvas camera={{ position: [0, 0, 6] }} dpr={[1, 2]}>
       <Environment preset="night" />
       <Lights />
-      <Stars radius={50} depth={50} count={3000} factor={4} fade />
+      <Stars
+        radius={100}
+        depth={60}
+        count={5000}
+        factor={6}
+        saturation={0}
+        speed={3}
+        fade
+      />
+
       <CameraRig />
     </Canvas>
   );

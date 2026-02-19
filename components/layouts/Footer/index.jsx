@@ -16,7 +16,7 @@ export default function Footer() {
         </motion.h2>
 
         <div className="flex justify-center gap-8 mb-10">
-          {["LinkedIn", "GitHub", "Twitter"].map((item) => (
+          {["LinkedIn", "GitHub"].map((item) => (
             <motion.a
               key={item}
               href="#"
