@@ -9,7 +9,7 @@ export default function Projects() {
       title: "3D Portfolio Website",
       description: "Interactive portfolio built using Next.js and Three.js.",
       tech: "Next.js • Three.js • Framer Motion",
-      link: null,
+      link: "#",
     },
     {
       title: "Smart Travel – AI Trip Planner",
