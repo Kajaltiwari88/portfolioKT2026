@@ -54,7 +54,13 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 1 }}
           whileHover={{ scale: 1.05 }}
-          className="mt-10 px-8 py-3 rounded-full bg-purple-600 hover:bg-purple-700 transition duration-300 shadow-lg shadow-purple-800/50"
+          className="mt-10 px-8 py-3 rounded-full bg-purple-600 hover:bg-purple-700 transition duration-300 shadow-lg shadow-purple-800/50 cursor-pointer"
+          onClick={() => {
+            const section = document.getElementById("projects");
+            section?.scrollIntoView({ behavior: "smooth" });
+            window.history.replaceState(null, "", "/");
+          }}
+
         >
           View My Work
         </motion.button>
