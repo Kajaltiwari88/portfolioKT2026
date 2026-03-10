@@ -9,21 +9,21 @@ export default function Projects() {
       title: "3D Portfolio Website",
       description: "Interactive portfolio built using Next.js and Three.js.",
       tech: "Next.js • Three.js • Framer Motion",
-      link: "#",
+      link: null,
     },
     {
       title: "Smart Travel – AI Trip Planner",
       description:
         "An intelligent travel planning system that generates optimized itineraries using AI. Includes expense tracking, map-based checkpoints, and real-time route visualization.",
       tech: "React.js with Vite • AI API • Google Maps • Tailwind",
-      link: "#",
+      link: null,
     },
     {
       title: "AI Meal Generator",
       description:
         "A smart meal planning application that generates personalized dietary and regular meal plans based on user preferences and nutrition goals.",
       tech: "React • API Integration • State Management",
-      link: "#",
+      link: null,
     },
     {
       title: "Bubble Game",
@@ -87,7 +87,7 @@ export default function Projects() {
                     rel="noopener noreferrer"
                     className="mt-auto inline-block text-center px-6 py-2 rounded-full bg-purple-600 hover:bg-purple-700 transition duration-300"
                   >
-                    View Project
+                   {project.link ? "View Project" : "Coming Soon !"}
                   </a>
                 </div>
               </Tilt>

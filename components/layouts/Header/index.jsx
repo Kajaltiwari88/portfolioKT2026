@@ -3,6 +3,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import { copyToClipboard } from "../../../Utilities/Helper.js";
 
 export default function Header() {
   const [active, setActive] = useState("home");
@@ -72,6 +73,7 @@ export default function Header() {
           <motion.h1
             whileHover={{ scale: 1.1 }}
             className="text-xl font-bold bg-linear-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent cursor-pointer"
+            onClick={() => copyToClipboard("tiwarikajal8898@gmail.com")}
           >
             tiwarikajal8898@gmail.com
           </motion.h1>
@@ -82,9 +84,8 @@ export default function Header() {
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
                 whileHover={{ scale: 1.1 }}
-                className={`relative text-sm uppercase tracking-widest cursor-pointer ${
-                  active === item.id ? "text-purple-400" : "text-gray-300"
-                }`}
+                className={`relative text-sm uppercase tracking-widest cursor-pointer ${active === item.id ? "text-purple-400" : "text-gray-300"
+                  }`}
               >
                 {item?.name}
 
@@ -129,9 +130,8 @@ export default function Header() {
                   key={item?.id}
                   onClick={() => scrollToSection(item?.id)}
                   whileHover={{ scale: 1.1 }}
-                  className={`text-lg ${
-                    active === item?.id ? "text-purple-400" : "text-gray-300"
-                  }`}
+                  className={`text-lg ${active === item?.id ? "text-purple-400" : "text-gray-300"
+                    }`}
                 >
                   {item?.name}
                 </motion.button>
